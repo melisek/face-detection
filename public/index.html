@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Realeyes homework</title>
+	<link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <h1>Realeyes homework</h1>
+    <div id="non-capable">
+      <p>You should be equipped with a webcam and allow us its usage</p>
+    </div>
+    <div id="capable">
+      <div id="camera-denied">
+        <h2>To continue exercise please refresh the page and allow your webcam!</h2>
+      </div>
+      <div id="camera-allowed">
+        <div class="video">
+          <video height="240" id="video" width="320" autoplay></video>
+          <button id="captureBtn">Recognize</button>
+          <canvas height="240" id="canvas" width="320"></canvas>
+        </div>
+        <div class="capture">
+          <div id="analyzisWrapper">
+            <h1>Analysis</h1>
+            <pre id="analysis">Analysis result should show up here...</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+	<script src="http://webrtc.github.io/adapter/adapter-latest.js"></script>
+	<script async src="https://codesdwncdn.realeyesit.com/environment-checker/Realeyesit.EnvironmentalDetectionAPI.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="js/main.js"></script>
+  </body>
+</html>

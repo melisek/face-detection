@@ -1,0 +1,12 @@
+{
+  "name": "face-recognition",
+  "version": "1.0.0",
+  "description": "Face recognition using Amazon Recognition",
+  "author": "Mark Melisek",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "multer": "^1.3.0"
+  }
+}
