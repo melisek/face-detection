@@ -21,7 +21,7 @@ app.use(express.static('public')); // serving static files
 
 // Handle POST request 
 // Copy captured image blob to memoryStorage
-app.post('/recognize', upload.single('img'), function (req, res, next) {
+app.post('/detect', upload.single('img'), function (req, res, next) {
 	
 	var params = {
 		"Image": {

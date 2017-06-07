@@ -1,7 +1,7 @@
 {
-  "name": "face-recognition",
+  "name": "face-detection",
   "version": "1.0.0",
-  "description": "Face recognition using Amazon Recognition",
+  "description": "Face detection with webcam using Amazon Rekognition JavaScript SDK",
   "author": "Mark Melisek",
   "license": "MIT",
   "dependencies": {

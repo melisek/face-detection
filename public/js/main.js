@@ -39,7 +39,7 @@ function handleError(error) {
 navigator.mediaDevices.getUserMedia(constraints).
     then(handleSuccess).catch(handleError);
 
-// Draw captured image to canvas and post image blob to server for face recognition
+// Draw captured image to canvas and post image blob to server for face detection
 
 var canvas = window.canvas = document.getElementById('canvas');
 var button = $('#captureBtn');
@@ -57,7 +57,7 @@ function getCanvasBlob() {
 		data.append('img', blob);
 
 		$.ajax({
-			url :  "./recognize",
+			url :  "./detect",
 			type: 'POST',
 			data: data,
 			contentType: false,
@@ -76,7 +76,7 @@ function getCanvasBlob() {
 
 // Display results from Amazon Rekognition
 function displayResult(json) {
-	$('#analysis').html('<p>Faces recognized: ' + json.FaceDetails.length + '</p>');
+	$('#analysis').html('<p>Faces detected: ' + json.FaceDetails.length + '</p>');
 	
 	var strokeColor = [ 255, 255, 255 ];
 	$.each( json.FaceDetails, function( i, face ) {
